@@ -1,24 +1,30 @@
 :root {
   --bg:white;
-  --color:black;
+  --color:rgb(46, 48, 54);
+  --duration:0.4s;
 }
 *{box-sizing: border-box;}
-:root .App.dark {
-  --bg:rgb(46, 48, 54);
-  --color:white;
-}
+:root .App.dark {--bg:rgb(46, 48, 54);--color:white;}
 html, body {
   margin:0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
-.App {background: var(--bg); color: var(--color);width:100%; height:100%;padding:1rem;}
-svg * {
-  stroke:var(--color);
-}
+.App {
+  background: var(--bg); 
+  color: var(--color);
+  width:100%; height:100%;
+  padding:1rem;transition: var(--duration) ease-in-out;}
+svg * {stroke:var(--bg); stroke-width:1px;}
 button.theme-toggle {
   padding: 0;
   background: 0;
   border: none;
 }
+[id*="Theme-toggle"] *{
+  fill:var(--color);
+  transition: transform var(--duration);
+}
+button#Theme-toggle-radio.dark #radio-toggle{transform:translateX(31px);}
+button#Theme-toggle-radio #button {fill: var(--bg );}
