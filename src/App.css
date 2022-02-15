@@ -21,10 +21,22 @@ button.theme-toggle {
   padding: 0;
   background: 0;
   border: none;
+  overflow:hidden;
 }
 [id*="Theme-toggle"] *{
   fill:var(--color);
   transition: transform var(--duration);
 }
+
 button#Theme-toggle-radio.dark #radio-toggle{transform:translateX(31px);}
+button#Theme-toggle-radio.dark g#radio-toggle g#Moon {transform:rotate(0.5turn);}
+button#Theme-toggle-radio g#radio-toggle g#Moon {transform:rotate(0);}
+button#Theme-toggle-radio g#radio-toggle path#Sun {transform:rotate(0.5turn);}
+button#Theme-toggle-radio.dark g#radio-toggle path#Sun {transform:rotate(0);}
 button#Theme-toggle-radio #button {fill: var(--bg );}
+
+button#Theme-toggle-button {border-radius:50%;line-height:0;padding:0;background-color: var(--color);}
+button#Theme-toggle-button.dark #Moon {transform:rotate(0.5turn);}
+button#Theme-toggle-button #Moon {transform:rotate(0);}
+button#Theme-toggle-button.dark #Sun {transform:rotate(0);}
+button#Theme-toggle-button #Sun {transform:rotate(0.5turn);}
