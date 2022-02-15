@@ -17,10 +17,8 @@ function App() {
   }
   return (
     <div className={`App ${theme}`}>
-      <h1>This works</h1>
       <button className={`theme-toggle ${theme}`} onClick={changeTheme} id="Theme-toggle-radio"><ThemeToggle2 /></button>
       <button className={`theme-toggle ${theme}`} onClick={changeTheme} id="Theme-toggle-button"><ThemeToggle1 /></button>
-      
     </div>
   );
 }
