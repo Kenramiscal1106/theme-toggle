@@ -12,13 +12,11 @@ function App() {
     else setTheme('')
     console.log((test(dark, true) ? "It's dark mode" : "It's light mode"))
   }, [dark])
-  const changeTheme = () => {
-    setDark(!dark)
-  }
+  const toggleTheme = () => {setDark(!dark)}
   return (
     <div className={`App ${theme}`}>
-      <button className={`theme-toggle ${theme}`} onClick={changeTheme} id="Theme-toggle-radio"><ThemeToggle2 /></button>
-      <button className={`theme-toggle ${theme}`} onClick={changeTheme} id="Theme-toggle-button"><ThemeToggle1 /></button>
+      <button className={`theme-toggle ${theme}`} onClick={toggleTheme} id="Theme-toggle-radio"><ThemeToggle2 /></button>
+      <button className={`theme-toggle ${theme}`} onClick={toggleTheme} id="Theme-toggle-button"><ThemeToggle1 /></button>
     </div>
   );
 }
